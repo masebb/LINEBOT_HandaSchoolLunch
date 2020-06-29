@@ -14,7 +14,7 @@ import static tech.saltandsugar.Line_send.line_send;
 
 //TODO static ってなんでついてるの？？？？？？
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         //時刻生成
         LocalDateTime ldt = LocalDateTime.now();
@@ -26,6 +26,7 @@ public class main {
 
         ArrayList<String[]> data_kyuusyoku = load_data();
         System.out.println("元データ:"+ Arrays.deepToString(data_kyuusyoku.toArray()));
+        //TODO 拡張forに置き換え
         for (int i=0;data_kyuusyoku.size()>i; i++) {
             System.out.println(Arrays.deepToString(data_kyuusyoku.get(i)));
         }
