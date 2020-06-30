@@ -38,7 +38,7 @@ public class Line_send {
                             Box.builder()
                                     .layout(FlexLayout.VERTICAL)
                                     .margin(FlexMarginSize.SM)
-                                    .spacing(FlexMarginSize.SM)
+                                    .spacing(FlexMarginSize.LG)
                                     .contents(asList(
                                             Box
                                                     .builder()
@@ -205,8 +205,9 @@ public class Line_send {
                                                     .content(
                                                             Text.builder()
                                                                     .size(FlexFontSize.XXS)
-                                                                    .text("献立名についている「★」は加工食品を表しています")
+                                                                    .text("献立名にある★は、加工食品を表しています。すべての食材を表記しているものではありません。")
                                                                     .align(FlexAlign.END)
+                                                                    .wrap(true)
                                                                     .build()
                                                     ).build()
                                             ,
