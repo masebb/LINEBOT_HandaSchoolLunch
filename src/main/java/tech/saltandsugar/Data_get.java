@@ -13,7 +13,7 @@ public class Data_get {
      * @return ArrayList データをCSVファイルから取得してArrayList<String[]>(2次元配列)で返す
      */
     public static ArrayList<String[]> load_data(){
-        String dir_File = "./data/kyushoku_202006.csv/";
+        String dir_File = "./data/kyushoku_202007.csv/";
         try {
             System.out.println("//ファイル読み込み開始//");
             //ファイル読み込み
