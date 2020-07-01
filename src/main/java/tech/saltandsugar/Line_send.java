@@ -18,11 +18,9 @@ import static java.util.Arrays.asList;
 
 public class Line_send {
     public static void line_send(String[] final_data, String channelToken) {
-        //TODO 絶対消す
         LineMessagingClient client = LineMessagingClient.builder(channelToken).build();
-        //LineMessagingClient client = LineMessagingClient.builder("YOUR_CHANNEL_TOKEN").build();
         if (!(final_data == null) && !(final_data.length < 5)) {
-            //画像取得
+            //TODO 画像
 //            final Image heroBlock =
 //                    Image.builder()
 //                            .url(URI.create("https://placehold.jp/70/757575/ffffff/900x900.png?text=%E7%94%BB%E5%83%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%0A"))
