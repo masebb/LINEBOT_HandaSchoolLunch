@@ -4,6 +4,8 @@
 name: CRON_SEND
 
 on:
+  repository_dispatch:
+    types: [manual_trigger]
   schedule:
     - cron:  '00 15 * * 1-5'
 
