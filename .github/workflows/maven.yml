@@ -24,4 +24,4 @@ jobs:
       run: mvn package
     - name: Run
       #ここをバージョンで変えなきゃいけない
-      run: java -jar target/LINEBOT_HandaSchoolLunch-1.0.0.jar
+      run: java -jar target/LINEBOT_HandaSchoolLunch1.0.0.jar
