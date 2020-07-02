@@ -15,6 +15,7 @@ import static tech.saltandsugar.Line_send.line_send;
 //TODO static ってなんでついてるの？？？？？？
 
 public class Main {
+    final boolean DEBUG = true;
     public static void main(String[] args) {
         //時刻生成
         LocalDateTime ldt = LocalDateTime.now();
@@ -26,13 +27,11 @@ public class Main {
 
         ArrayList<String[]> data_kyuusyoku = load_data();
         System.out.println("元データ:"+ Arrays.deepToString(data_kyuusyoku.toArray()));
-        //TODO 拡張forに置き換え
-        for (int i=0;data_kyuusyoku.size()>i; i++) {
-            System.out.println(Arrays.deepToString(data_kyuusyoku.get(i)));
-        }
-
         System.out.println("検索結果 : " + Arrays.toString(data_search(nowdate,data_kyuusyoku)));
-
-        line_send(data_search(nowdate, data_kyuusyoku),args[0]);
+        if(args[0]!=null) {
+            line_send(data_search(nowdate, data_kyuusyoku), args[0]);
+        }else{
+            System.out.println("チャンネルトークンを引数に入れてください");
+        }
     }
 }

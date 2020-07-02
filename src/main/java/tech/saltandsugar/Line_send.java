@@ -30,18 +30,24 @@ public class Line_send {
 //                            .build();
 
             //ブロードキャスト(送信)
-            client.broadcast(new Broadcast(new FlexMessage("献立",
+            client.broadcast(new Broadcast(new FlexMessage("明日の学校給食",
                     Bubble.builder()
                             /*.hero(heroBlock)*/.body(
                             Box.builder()
                                     .layout(FlexLayout.VERTICAL)
                                     .margin(FlexMarginSize.SM)
-                                    .spacing(FlexMarginSize.LG)
+                                    .spacing(FlexMarginSize.MD)
                                     .contents(asList(
+                                            Text.builder()
+                                                .text("明日の給食")
+                                                .size(FlexFontSize.XXL)
+                                                .weight(Text.TextWeight.BOLD)
+                                            .build(),
                                             Box
                                                     .builder()
                                                     .layout(FlexLayout.BASELINE)
                                                     .spacing(FlexMarginSize.SM)
+                                                    .margin(FlexMarginSize.XXL)
                                                     .contents(asList(
                                                             Text.builder()
                                                                     .text("主食")
