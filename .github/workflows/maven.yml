@@ -6,9 +6,6 @@ name: CRON_SEND
 on:
   repository_dispatch:
     types: [manual_trigger]
-  schedule:
-    - cron:  '00 03 * * 1-5'
-
 jobs:
   build:
 
