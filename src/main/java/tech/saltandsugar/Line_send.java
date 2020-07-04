@@ -4,7 +4,9 @@ import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.model.Broadcast;
 import com.linecorp.bot.model.action.URIAction;
 import com.linecorp.bot.model.message.FlexMessage;
+import com.linecorp.bot.model.message.TextMessage;
 import com.linecorp.bot.model.message.flex.component.Box;
+import com.linecorp.bot.model.message.flex.component.Separator;
 import com.linecorp.bot.model.message.flex.component.Text;
 import com.linecorp.bot.model.message.flex.container.Bubble;
 import com.linecorp.bot.model.message.flex.unit.FlexAlign;
@@ -30,7 +32,7 @@ public class Line_send {
 //                            .build();
 
             //ブロードキャスト(送信)
-            client.broadcast(new Broadcast(new FlexMessage("明日の学校給食",
+            client.broadcast(new Broadcast(new FlexMessage("今日の学校給食",
                     Bubble.builder()
                             /*.hero(heroBlock)*/.body(
                             Box.builder()
@@ -39,10 +41,15 @@ public class Line_send {
                                     .spacing(FlexMarginSize.MD)
                                     .contents(asList(
                                             Text.builder()
-                                                .text("明日の給食")
+                                                .text("今日の給食")
+                                                .margin(FlexMarginSize.XXL)
                                                 .size(FlexFontSize.XXL)
                                                 .weight(Text.TextWeight.BOLD)
                                             .build(),
+                                            Separator.builder()
+                                                    .margin(FlexMarginSize.LG)
+                                                    .build()
+                                            ,
                                             Box
                                                     .builder()
                                                     .layout(FlexLayout.BASELINE)
@@ -278,7 +285,8 @@ public class Line_send {
                                     ).build()
                     ).build()
             )));
-//            client.broadcast(new Broadcast(new TextMessage(Arrays.toString(final_data))));
         }
+        //TODO デバック用
+        client.broadcast(new Broadcast(new TextMessage("今日は"+final_data[1]+"/"+final_data[2]+"/"+final_data[3]+"です")));
     }
 }
