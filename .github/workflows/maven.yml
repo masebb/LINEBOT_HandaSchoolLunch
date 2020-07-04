@@ -5,7 +5,7 @@ name: CRON_SEND
 
 on:
   schedule:
-    - cron:  '00 21 * * 1-5'
+    - cron:  '00 23 * * 1-5'
   repository_dispatch:
     types: [manual_trigger]
 jobs:
