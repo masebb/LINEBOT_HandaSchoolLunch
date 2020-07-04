@@ -23,4 +23,4 @@ jobs:
       run: mvn package
     - name: Run
       #ここをバージョンで変えなきゃいけない
-      run: java -jar target/LINEBOT_HandaSchoolLunch1.0.1.jar ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+      run: date && java -jar target/LINEBOT_HandaSchoolLunch1.0.1.jar ${{ secrets.CHANNEL_ACCESS_TOKEN }}
