@@ -4,7 +4,6 @@ import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.model.Broadcast;
 import com.linecorp.bot.model.action.URIAction;
 import com.linecorp.bot.model.message.FlexMessage;
-import com.linecorp.bot.model.message.TextMessage;
 import com.linecorp.bot.model.message.flex.component.Box;
 import com.linecorp.bot.model.message.flex.component.Separator;
 import com.linecorp.bot.model.message.flex.component.Text;
@@ -83,7 +82,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[5] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[5] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -103,7 +102,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[6] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[6] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -123,7 +122,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[7] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[7] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -143,7 +142,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[8] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[8] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -163,7 +162,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[9] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[9] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -183,7 +182,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[10] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[10] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -203,7 +202,7 @@ public class Line_send {
                                                                     .wrap(true)
                                                                     .build(),
                                                             Text.builder()
-                                                                    .text(final_data[11] + " ")//インチキ(空白("")だと怒られる)
+                                                                    .text(final_data[11] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -286,7 +285,7 @@ public class Line_send {
                     ).build()
             )));
         }
-        //TODO デバック用
-        client.broadcast(new Broadcast(new TextMessage("今日は"+final_data[1]+"/"+final_data[2]+"/"+final_data[3]+"です")));
+        //デバック用
+        // client.broadcast(new Broadcast(new TextMessage("今日は"+final_data[1]+"/"+final_data[2]+"/"+final_data[3]+"です")));
     }
 }

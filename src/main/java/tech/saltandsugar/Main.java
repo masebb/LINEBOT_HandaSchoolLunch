@@ -12,17 +12,21 @@ import static tech.saltandsugar.Line_send.line_send;
 //TODO static ってなんでついてるの？？？？？？
 
 public class Main {
-    final boolean DEBUG = true;
     public static void main(String[] args) {
         //時刻生成
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
+        /*
+        * Q:なぜ1日足してるの??????
+        * A:GitHubActionsの環境はUTC時刻のため、毎朝06:00に送信するとなるとUTC時刻では1日前の21:00。なので1日後のデータを取得するため
+        * TODO あほ
+        * */
         calendar.add(Calendar.DAY_OF_MONTH,1);
 
         Date nowdate = calendar.getTime();
         ArrayList<String[]> data_kyuusyoku = load_data();
-        System.out.println("元データ:"+ Arrays.deepToString(data_kyuusyoku.toArray()));
-        System.out.println("検索結果 : " + Arrays.toString(data_search(nowdate,data_kyuusyoku)));
+        System.out.println("original-data:"+ Arrays.deepToString(data_kyuusyoku.toArray()));
+        System.out.println("results : " + Arrays.toString(data_search(nowdate,data_kyuusyoku)));
         if(args[0]!=null) {
             line_send(data_search(nowdate, data_kyuusyoku), args[0]);
         }else{
