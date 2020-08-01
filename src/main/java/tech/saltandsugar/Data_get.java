@@ -14,7 +14,7 @@ public class Data_get {
      */
     public static ArrayList<String[]> load_data(){
         //TODO ファイル名の変更を動的にしたい
-        String dir_File = "./data/kyushoku_202007.csv/";
+        String dir_File = "./data/kyushoku_202008.csv/";
         try {
             System.out.println("//ファイル読み込み開始//");
             //ファイル読み込み
