@@ -17,7 +17,7 @@ public class Main {
         * */
         calendar.add(Calendar.DAY_OF_MONTH,1);
         String[] nowDate_Array = Data_get.DatetoArray(calendar.getTime());
-//      String[] nowDate_Array = {"2020","9","8"}; //デバック用
+//      String[] nowDate_Array = {"2020","10","1"}; //デバック用
         ArrayList<String[]> data_kyuusyoku = Data_get.load_data(nowDate_Array);
         System.out.println("original-data:"+ Arrays.deepToString(data_kyuusyoku.toArray()));
         System.out.println("results : " + Arrays.toString(Data_get.data_search(nowDate_Array,data_kyuusyoku)));

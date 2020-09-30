@@ -26,8 +26,14 @@ public class Data_get {
      * @param nowDate_Array ファイル名の推測に利用します(DatetoArrayメゾットを使ってDateから生成してください)
      */
     public static ArrayList<String[]> load_data(String[] nowDate_Array){
-        //TODO ファイル名の変更を動的にしたい
-        String dir_File = "./data/kyushokumenu/kyushoku_20200"+nowDate_Array[1]+".csv/";
+        //TODO ナンセンス?(とりあえず回避)
+        String dir_File;
+        System.out.println(nowDate_Array[1].length());
+        if(nowDate_Array[1].length()==1) {
+            dir_File = "./data/kyushokumenu/kyushoku_20200" + nowDate_Array[1] + ".csv/";
+        }else{
+            dir_File = "./data/kyushokumenu/kyushoku_2020" + nowDate_Array[1] + ".csv/";
+        }
         try {
             System.out.println("//ファイル読み込み開始//");
             //ファイル読み込み
