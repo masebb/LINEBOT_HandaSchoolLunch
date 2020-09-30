@@ -26,7 +26,6 @@ public class Data_get {
     public static ArrayList<String[]> load_data(String[] nowDate_Array){
         //TODO ナンセンス?(とりあえず回避)
         String dir_File;
-        System.out.println(nowDate_Array[1].length());
         if(nowDate_Array[1].length()==1) {
             dir_File = "./data/kyushokumenu/kyushoku_20200" + nowDate_Array[1] + ".csv/";
         }else{
