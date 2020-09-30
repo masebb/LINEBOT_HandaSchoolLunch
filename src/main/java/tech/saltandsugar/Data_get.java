@@ -14,11 +14,9 @@ public class Data_get {
      * @pram date
      */
     public static String[] DatetoArray(Date date) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/d");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/M/d");
         simpleDateFormat.setLenient(false);//厳密化
         String[] Array_date = simpleDateFormat.format(date).split("/");
-        Array_date[1] = Array_date[1].replace("0", "");
-
         return Array_date;
     }
     /**
@@ -63,8 +61,9 @@ public class Data_get {
      * */
     public static String[] data_search(String[] nowDate_Array, ArrayList<String[]> kyusyoku_list){
         //TODO なんかアルゴリズムとかやってみたいよね
-        //removeIfメゾット作ったやつ国民栄誉賞
         ArrayList<String[]> tmp_kyusyoku_list = (ArrayList<String[]>) kyusyoku_list.clone();
+
+        //removeIfメゾット作ったやつ国民栄誉賞
         //年
         tmp_kyusyoku_list.removeIf(data-> (!data[1].equals(nowDate_Array[0])));
         if(tmp_kyusyoku_list.size() == 0){
