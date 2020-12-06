@@ -4,8 +4,6 @@
 name: CRON_SEND
 
 on:
-  schedule:
-    - cron:  '00 21 * * 0-4'
   workflow_dispatch:
 jobs:
   build:
