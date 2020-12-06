@@ -16,11 +16,15 @@ public class LineOfficialAccount_Send{
 
     @Autowired
     LineMessagingClient lineMessagingClient;
-//    @Scheduled(cron = "0 * * * * *", zone = "Asia/Tokyo")//デバック
-    @Scheduled(cron = "0 0 06 * * MON-FRI", zone = "Asia/Tokyo")
+    @Scheduled(cron = "0 * * * * *", zone = "Asia/Tokyo")//デバック
+//    @Scheduled(cron = "0 0 06 * * MON-FRI", zone = "Asia/Tokyo")
     public void SchaduledSend() {
-        //平日
-        LineOfficialAccount_KondateInfomationFlexMessage lineOfficialAccount_kondateInfomationFlexMessage = new LineOfficialAccount_KondateInfomationFlexMessage();
-        lineMessagingClient.broadcast(new Broadcast(lineOfficialAccount_kondateInfomationFlexMessage.flexmessage));
+        if(!(DataSearch.todayKyushokuKondate.length<5)){
+            //平日(データがある)
+            LineOfficialAccount_KondateInfomationFlexMessage lineOfficialAccount_kondateInfomationFlexMessage = new LineOfficialAccount_KondateInfomationFlexMessage();
+            lineMessagingClient.broadcast(new Broadcast(lineOfficialAccount_kondateInfomationFlexMessage.flexmessage));
+        }else{
+            //休日(データがない)
+        }
     }
 }
