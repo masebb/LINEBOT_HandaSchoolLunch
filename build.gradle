@@ -35,7 +35,7 @@ jar {
 }
 
 group = 'LINEBOT_HandaSchoolLunch'
-version = 'BATA1.1.1'
+version = '2.0.1'
 sourceCompatibility = '12'
 
 test {
