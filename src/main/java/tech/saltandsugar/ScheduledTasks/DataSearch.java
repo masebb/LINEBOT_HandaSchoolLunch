@@ -47,9 +47,15 @@ public class DataSearch {
             log.error("原因不明エラー");
         }else {
             String[] finaldata = data.get(result);
-            todayKyushokuKondate = new String[]
-                    {finaldata[4], finaldata[5], finaldata[6], finaldata[7], finaldata[8], finaldata[9], finaldata[10], finaldata[11], finaldata[12], finaldata[13]};
-            //わーきれいなスパゲッティコード！！！！！
+            if(!(finaldata.length<5)){
+                //平日
+                todayKyushokuKondate = new String[]
+                        {finaldata[4], finaldata[5], finaldata[6], finaldata[7], finaldata[8], finaldata[9], finaldata[10], finaldata[11], finaldata[12], finaldata[13]};
+                //わーきれいなスパゲッティコード！！！！！
+            }else{
+                //休日
+                todayKyushokuKondate=null;
+            }
         }
     }
 }

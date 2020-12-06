@@ -6,10 +6,7 @@ import com.linecorp.bot.model.message.flex.component.Box;
 import com.linecorp.bot.model.message.flex.component.Separator;
 import com.linecorp.bot.model.message.flex.component.Text;
 import com.linecorp.bot.model.message.flex.container.Bubble;
-import com.linecorp.bot.model.message.flex.unit.FlexAlign;
-import com.linecorp.bot.model.message.flex.unit.FlexFontSize;
-import com.linecorp.bot.model.message.flex.unit.FlexLayout;
-import com.linecorp.bot.model.message.flex.unit.FlexMarginSize;
+import com.linecorp.bot.model.message.flex.unit.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.URI;
@@ -65,7 +62,7 @@ public class LineOfficialAccount_KondateInfomationFlexMessage {
                                                     .spacing(FlexMarginSize.SM)
                                                     .contents(asList(
             Text.builder()
-                                                                    .text("献立名1")
+                                                                    .text("献立名")
                                                                     .color("#aaaaaa")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
@@ -84,18 +81,19 @@ public class LineOfficialAccount_KondateInfomationFlexMessage {
                                                     .layout(FlexLayout.BASELINE)
                                                     .spacing(FlexMarginSize.SM)
                                                     .contents(asList(
-            Text.builder()
-                                                                    .text("献立名2")
-                                                                    .color("#aaaaaa")
-                                                                    .size(FlexFontSize.Md)
-                                                                    .wrap(true)
-                                                                    .build(),
+//            Text.builder()
+//                                                                    .text("献立名2")
+//                                                                    .color("#aaaaaa")
+//                                                                    .size(FlexFontSize.Md)
+//                                                                    .wrap(true)
+//                                                                    .build(),
                                                             Text.builder()
                                                                     .text(todayKyushokuKondate[2] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
                                                                     .flex(3)
+                                                                    .offsetStart("68px")
                                                                     .build()
                                                     )).build()
                                             ,
@@ -104,18 +102,19 @@ public class LineOfficialAccount_KondateInfomationFlexMessage {
                                                     .layout(FlexLayout.BASELINE)
                                                     .spacing(FlexMarginSize.SM)
                                                     .contents(asList(
-            Text.builder()
-                                                                    .text("献立名3")
-                                                                    .color("#aaaaaa")
-                                                                    .size(FlexFontSize.Md)
-                                                                    .wrap(true)
-                                                                    .build(),
+//            Text.builder()
+//                                                                    .text("献立名3")
+//                                                                    .color("#aaaaaa")
+//                                                                    .size(FlexFontSize.Md)
+//                                                                    .wrap(true)
+//                                                                    .build(),
                                                             Text.builder()
                                                                     .text(todayKyushokuKondate[3] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
                                                                     .flex(3)
+                                                                    .offsetStart("68px")
                                                                     .build()
                                                     )).build()
                                             ,
@@ -124,18 +123,19 @@ public class LineOfficialAccount_KondateInfomationFlexMessage {
                                                     .layout(FlexLayout.BASELINE)
                                                     .spacing(FlexMarginSize.SM)
                                                     .contents(asList(
-            Text.builder()
-                                                                    .text("献立名4")
-                                                                    .color("#aaaaaa")
-                                                                    .size(FlexFontSize.Md)
-                                                                    .wrap(true)
-                                                                    .build(),
+//            Text.builder()
+//                                                                    .text("献立名4")
+//                                                                    .color("#aaaaaa")
+//                                                                    .size(FlexFontSize.Md)
+//                                                                    .wrap(true)
+//                                                                    .build(),
                                                             Text.builder()
                                                                     .text(todayKyushokuKondate[4] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
                                                                     .flex(3)
+                                                                    .offsetStart("68px")
                                                                     .build()
                                                     )).build()
                                             ,
@@ -144,18 +144,19 @@ public class LineOfficialAccount_KondateInfomationFlexMessage {
                                                     .layout(FlexLayout.BASELINE)
                                                     .spacing(FlexMarginSize.SM)
                                                     .contents(asList(
-            Text.builder()
-                                                                    .text("献立名5")
-                                                                    .color("#aaaaaa")
-                                                                    .size(FlexFontSize.Md)
-                                                                    .wrap(true)
-                                                                    .build(),
+//            Text.builder()
+//                                                                    .text("献立名5")
+//                                                                    .color("#aaaaaa")
+//                                                                    .size(FlexFontSize.Md)
+//                                                                    .wrap(true)
+//                                                                    .build(),
                                                             Text.builder()
                                                                     .text(todayKyushokuKondate[5] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
                                                                     .flex(3)
+                                                                    .offsetStart("68px")
                                                                     .build()
                                                     )).build()
                                             ,
@@ -164,18 +165,19 @@ public class LineOfficialAccount_KondateInfomationFlexMessage {
                                                     .layout(FlexLayout.BASELINE)
                                                     .spacing(FlexMarginSize.SM)
                                                     .contents(asList(
-            Text.builder()
-                                                                    .text("献立名6")
-                                                                    .color("#aaaaaa")
-                                                                    .size(FlexFontSize.Md)
-                                                                    .wrap(true)
-                                                                    .build(),
+//            Text.builder()
+//                                                                    .text("献立名6")
+//                                                                    .color("#aaaaaa")
+//                                                                    .size(FlexFontSize.Md)
+//                                                                    .wrap(true)
+//                                                                    .build(),
                                                             Text.builder()
                                                                     .text(todayKyushokuKondate[6] + " ")
                                                                     .color("#666666")
                                                                     .size(FlexFontSize.Md)
                                                                     .wrap(true)
                                                                     .flex(3)
+                                                                    .offsetStart("68px")
                                                                     .build()
                                                     )).build()
                                             ,
