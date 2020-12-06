@@ -16,8 +16,8 @@ public class LineOfficialAccount_Send{
 
     @Autowired
     LineMessagingClient lineMessagingClient;
-    @Scheduled(cron = "0 * * * * *", zone = "Asia/Tokyo")//デバック
-//    @Scheduled(cron = "0 0 06 * * MON-FRI", zone = "Asia/Tokyo")
+//    @Scheduled(cron = "0 * * * * *", zone = "Asia/Tokyo")//デバック
+    @Scheduled(cron = "0 0 06 * * MON-FRI", zone = "Asia/Tokyo")
     public void SchaduledSend() {
         if(!(DataSearch.todayKyushokuKondate.length<5)){
             //平日(データがある)
