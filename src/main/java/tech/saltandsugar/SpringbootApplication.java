@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import tech.saltandsugar.ScheduledTasks.DataSearch;
 
+import java.util.TimeZone;
+
 @SpringBootApplication
 @Slf4j
 public class SpringbootApplication {
@@ -35,9 +37,16 @@ public class SpringbootApplication {
         System.out.println("\u001B[32m"+
                 "                                      ::LINEBOT_HandaSchoolLunch::\n"+
                 "                                             by Mase Taiyo"+"\u001B[0m");
-        //初回検索
-        dataSearch.doSearch();
+
+        //TimeZoneが"Asia/Tokyo"か
+        if(TimeZone.getDefault().toZoneId()==TimeZone.getTimeZone("Asia/Tokyo").toZoneId()){
+            //初回検索
+            dataSearch.doSearch();
+        }else{
+            //えらーーーー
+            log.error("システム時刻がAsia/Tokyo以外になっています : "+TimeZone.getDefault().getID());
+            System.exit(1);
+        }
     }
-//    @Scheduled(cron = "0 0 06 * * MON-FRI", zone = "Asia/Tokyo")
-////    @Scheduled(cron= "0 * * * * *" , zone = "Asia/Tokyo")
+
 }
